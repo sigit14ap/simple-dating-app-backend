@@ -11,7 +11,8 @@ services:
       - db
   db:
     image: mysql:latest
-    env_file:
-      - .env
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: simple_dating_app
     ports:
       - "3306:3306"

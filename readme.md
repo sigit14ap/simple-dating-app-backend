@@ -87,6 +87,7 @@ Functionality for business logic purposes.
 ### Without Docker
 
 ```bash
+  go mod download
   go run cmd/main.go
 ```
 
@@ -94,6 +95,12 @@ Functionality for business logic purposes.
 ```bash
 docker-compose build
 docker-compose up -d
+```
+- Note :
+Please change these variable in docker-compose.yml to same as your .env file
+```
+MYSQL_ROOT_PASSWORD: password
+MYSQL_DATABASE: simple_dating_app
 ```
 
 

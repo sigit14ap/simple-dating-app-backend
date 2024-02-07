@@ -2,14 +2,12 @@ FROM golang:latest
 
 WORKDIR /app
 
-COPY go.mod go.sum ./
+COPY . .
 
 RUN go mod download
 
-COPY . .
-
-RUN go build -o main .
+RUN go build -o ./cmd/main.exe ./cmd/main.go
 
 EXPOSE 8080
 
-CMD ["./main"]
+CMD ["./cmd/main.exe"]
